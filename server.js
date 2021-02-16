@@ -14,8 +14,8 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 // View Engine Setup 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
     res.render('Home', {
@@ -32,7 +32,7 @@ app.post('/payment', function (req, res) {
         source: req.body.stripeToken,
         name: 'Zubair Saif',
         address: {
-            line1: 'Lahore Pakist',
+            line1: 'Lahore Pakistan',
             postal_code: '54000',
             city: 'Lahore',
             state: 'Punjab',
